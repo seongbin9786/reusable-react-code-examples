@@ -1,8 +1,18 @@
-https://reactjs.org/docs/composition-vs-inheritance.html
+## 리액트에서 코드를 재사용하는 방법을 정리했습니다.
 
-1. 리액트는 강력한 Composition 모델을 갖고 있습니다. 페이스북은 컴포넌트를 만들면서 상속을 사용한 적이 없다고 합니다. 리액트는 상속보다 Composition을 사용해서 코드를 재사용하는 것을 권장합니다.
+__clone 하신 후에 src 폴더내의 `.js` 파일들을 확인해보세요.
 
-2. 어떤 컴포넌트는 자식 요소가 무엇인지 실행 시간이 되어서야 알 수도 있습니다. Sidebar, Dialog 등 박스 등의 컨테이너 컴포넌트들에게는 자주 나타 나는 경우입니다. 이럴 때는 {props.children}을 사용해서 코드를 재사용하면 됩니다.
+설치: `npm i -S`
+<br />
+실행: `npm run`
+
+내용 출처: [페이스북 공식문서참고](https://reactjs.org/docs/composition-vs-inheritance.html)
+<br />
+HOC 코드 출처: [Veloport님의 HOC 실습코드](https://codesandbox.io/s/p793mnqyzx)
+
+1. 리액트는 상속보다 Composition을 사용해서 코드를 재사용하는 것을 권장합니다. 페이스북은 컴포넌트를 만들면서 상속을 사용한 적이 없다고 합니다. 
+
+2. 어떤 컴포넌트는 자식 요소가 무엇인지 실행 시간이 되어서야 알 수도 있습니다. Sidebar, Dialog 등 박스 등의 컨테이너 컴포넌트들에게는 자주 나타 나는 경우입니다. 이럴 때는 `{props.children}`을 사용해서 코드를 재사용하면 됩니다.
 
 3. children 만으로는 안 될 때가 있습니다. 여러 군데를 채워야 할 때인데, 아래처럼 props로 컴포넌트를 전달해야 합니다. 리액트에선 JSX도 props로 보낼 수 있습니다.
 ```js
