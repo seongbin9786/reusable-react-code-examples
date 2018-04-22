@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import UsingComponent from './1_use_props_children/UsingComponent';
 import AnotherUsingComponent from './1_use_props_children/AnotherUsingComponent';
 
-import logo from './logo.svg';
+import ComponentUsingLeftRight from './2_send_jsx_through_props/ComponentUsingLeftRight';
+
 import './App.css';
 
 class App extends Component {
@@ -12,6 +13,10 @@ class App extends Component {
       <div className="App">
         <UsingComponent />
         <AnotherUsingComponent />
+
+        <hr />
+
+        <ComponentUsingLeftRight />
 
         <hr />
       </div>
